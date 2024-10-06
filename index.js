@@ -20,9 +20,12 @@ formularioUser.addEventListener('submit', async function(event) {
         })
     })
     const mensaje = await response.json();
-    form2.style.display = "block";
-    form1.style.display = "none";
-    console.log(mensaje);
+    if (mensaje.mensaje != "Guardado") {
+        alert("Error al guardar la información");
+    } else {
+        form2.style.display = "block";
+        form1.style.display = "none";
+    }
 });
 
 formulario.addEventListener('submit', async function(event) {
