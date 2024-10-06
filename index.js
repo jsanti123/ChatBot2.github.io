@@ -8,8 +8,21 @@ formularioUser.addEventListener('submit', async function(event) {
     const edad = document.getElementById('edad').value;
     const form2 = document.getElementById('ChatBot');
     const form1 = document.getElementById('Informacion');
+    const response = await fetch('https://api-student-yg19.onrender.com/Student/guardar',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'cb65583e-4b30-45f9-8841-b6378b740e60'
+        },
+        body: JSON.stringify({
+            Nombre: nombre,
+            Edad: edad
+        })
+    })
+    const mensaje = await response.json();
     form2.style.display = "block";
     form1.style.display = "none";
+    console.log(mensaje);
 });
 
 formulario.addEventListener('submit', async function(event) {
