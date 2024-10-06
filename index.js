@@ -20,6 +20,7 @@ formularioUser.addEventListener('submit', async function(event) {
         })
     })
     const mensaje = await response.json();
+    console.log(mensaje);
     if (mensaje.message != "Guardado") {
         alert("Error al guardar la información");
     } else {
