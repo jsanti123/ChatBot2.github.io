@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EVA</title>
+</head>
+<body>
+    <div class="containerForm" id="Informacion">
+        <h2 class="tituloChatBot"> Información</h2>
+        <form id="formularioInfo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            <label class="edad" for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="container" id="ChatBot">
+        <h2 class="tituloChatBot">ChatBot Tu Amiga EVA</h2>
+        <form id="miFormulario">
+            <label class="tituloPregunta" for="pregunta">Pregunta:</label>
+            <br>
+            <textarea class="areaTexto" type="text" id="pregunta" name="pregunta" required></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="mensaje"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
